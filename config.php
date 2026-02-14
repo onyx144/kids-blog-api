@@ -24,7 +24,7 @@ define('DB_USER', getenv('DB_USER') ?: '');
 define('DB_PASS', getenv('DB_PASS') ?: '');
 define('DB_NAME', getenv('DB_NAME') ?: '');
 define('JWT_SECRET', getenv('JWT_SECRET') ?: '');
-define('JWT_EXPIRATION', (int)(getenv('JWT_EXPIRATION') ?: 86400)); // 24 часа
+define('JWT_EXPIRATION', (int)(getenv('JWT_EXPIRATION') ?: 86400)); 
 
 // Настройки CORS
 header('Access-Control-Allow-Origin: *');
