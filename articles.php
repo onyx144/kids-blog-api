@@ -267,7 +267,6 @@ if ($method === 'DELETE') {
         exit();
     }
     
-    // Проверка прав доступа
     $stmt = $db->prepare("SELECT * FROM articles WHERE id = ?");
     $stmt->execute([$articleId]);
     $article = $stmt->fetch();
