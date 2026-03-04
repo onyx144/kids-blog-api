@@ -263,7 +263,7 @@ if ($method === 'DELETE') {
     
     if (!$articleId) {
         http_response_code(400);
-        echo json_encode(['error' => 'Article ID is required']);
+        echo json_encode(['error' => 'Article ID is required!']);
         exit();
     }
     
