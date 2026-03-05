@@ -224,7 +224,6 @@ if ($method === 'PUT') {
         $params[] = $input['alt'];
     }
     
-    // Только админ может менять status
     if (isset($input['status']) && $user['role'] === 'admin') {
         $updates[] = "status = ?";
         $params[] = $input['status'];
