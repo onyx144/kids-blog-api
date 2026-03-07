@@ -218,7 +218,10 @@ if ($method === 'PUT') {
         $updates[] = "image = ?";
         $params[] = $input['image'];
     }
-    
+    if (isset($input['image_id'])) {
+        $updates[] = "image_id = ?";
+        $params[] = $input['image_id'];
+    }
     if (isset($input['alt'])) {
         $updates[] = "alt = ?";
         $params[] = $input['alt'];
