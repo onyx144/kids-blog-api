@@ -213,7 +213,11 @@ if ($method === 'PUT') {
         $updates[] = "category = ?";
         $params[] = $input['category'];
     }
-    
+
+    if (isset($input['description'])) {
+        $updates[] = "description = ?";
+        $params[] = $input['description'];
+    }
     if (isset($input['image'])) {
         $updates[] = "image = ?";
         $params[] = $input['image'];
