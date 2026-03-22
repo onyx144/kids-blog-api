@@ -247,6 +247,15 @@ if ($method === 'PUT') {
         $params[] = $input['alt'];
     }
     
+    if (isset($input['author_name'])) {
+        $updates[] = "author_name = ?";
+        $params[] = $input['author_name'];
+    }
+     
+    if (isset($input['author_address'])) {
+        $updates[] = "author_address = ?";
+        $params[] = $input['author_address'];
+    }
     if (isset($input['published_at'])) {
         $updates[] = "published_at = ?";
         $params[] = $input['published_at'];
