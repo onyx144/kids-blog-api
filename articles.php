@@ -256,6 +256,10 @@ if ($method === 'PUT') {
         $updates[] = "author_address = ?";
         $params[] = $input['author_address'];
     }
+    if (isset($input['author_website'])) {
+        $updates[] = "author_website = ?";
+        $params[] = $input['author_website'];
+    }
     if (isset($input['author_phone'])) {
         $updates[] = "author_phone = ?";
         $params[] = $input['author_phone'];
