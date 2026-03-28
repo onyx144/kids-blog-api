@@ -272,6 +272,10 @@ if ($method === 'PUT') {
         $updates[] = "published_at = ?";
         $params[] = $input['published_at'];
     }
+    if (isset($input['image_description'])) {
+        $updates[] = "image_description = ?";
+        $params[] = $input['image_description'];
+    }
     if (isset($input['status']) && $user['role'] === 'admin') {
         $updates[] = "status = ?";
         $params[] = $input['status'];
