@@ -273,7 +273,10 @@ if ($method === 'PUT') {
         $updates[] = "author_instagram = ?";
         $params[] = $input['author_instagram'];
     }
-    
+    if (isset($input['author_tiktok'])) {
+        $updates[] = "author_tiktok = ?";
+        $params[] = $input['author_tiktok'];
+    }
     if (isset($input['author_telegram'])) {
         $updates[] = "author_telegram = ?";
         $params[] = $input['author_telegram'];
