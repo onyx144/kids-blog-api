@@ -277,6 +277,10 @@ if ($method === 'PUT') {
         $updates[] = "author_facebook_group = ?";
         $params[] = $input['author_facebook_group'];
     }
+    if (isset($input['author_facebook_group'])) {
+        $updates[] = "author_facebook_group = ?";
+        $params[] = $input['author_facebook_group'];
+    }
     if (isset($input['author_tiktok'])) {
         $updates[] = "author_tiktok = ?";
         $params[] = $input['author_tiktok'];
