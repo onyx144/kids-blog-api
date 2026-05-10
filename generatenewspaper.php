@@ -2,6 +2,7 @@
 
 require_once 'config.php';
 require_once 'jwt_helper.php';
+require_once __DIR__ . '/generateNews/image.php';
 
 // ======================
 // DATABASE
@@ -145,6 +146,13 @@ if (!$data) {
     exit();
 }
 
+$imageQuery = trim($data['title'] ?? '') ?: $topic;
+$articleImage = fetchUnsplashImage($imageQuery);
+
+if (!$articleImage) {
+    $articleImage = $data['image'] ?? null;
+}
+
 // ======================
 // CREATE SLUG
 // ======================
@@ -199,7 +207,7 @@ $stmt->execute([
     1,
     'AI Writer',
     'published',
-    $data['image'],
+    $articleImage,
     $data['alt']
 ]);
 

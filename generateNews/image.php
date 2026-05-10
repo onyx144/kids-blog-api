@@ -1,8 +1,14 @@
+<?php
+
 function fetchUnsplashImage($query) {
-    $key = $_ENV['UNSPLASH_ACCESS_KEY'];
-    
-    $url = "https://api.unsplash.com/search/photos?query=" 
-         . urlencode($query) 
+    $key = $_ENV['UNSPLASH_ACCESS_KEY'] ?? '';
+
+    if ($key === '') {
+        return null;
+    }
+
+    $url = "https://api.unsplash.com/search/photos?query="
+         . urlencode($query)
          . "&per_page=1&orientation=landscape";
 
     $ch = curl_init($url);
