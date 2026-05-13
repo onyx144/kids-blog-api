@@ -225,10 +225,7 @@ sendTelegramMessage(
 
 ID: {$articleId}"
 );
-
-// ======================
-// FUNCTIONS
-// ======================
+ 
 
 function createSlug($title)
 {
