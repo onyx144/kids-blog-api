@@ -205,8 +205,8 @@ $stmt->execute([
     $data['content'],
     $data['category'],
     1,
-    'AI Writer',
-    'published',
+    'Добра Собака',
+    'approved',
     $articleImage,
     $data['alt']
 ]);
