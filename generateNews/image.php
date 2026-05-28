@@ -15,7 +15,7 @@ function unsplashQueryToLatin($query, $enforceLatin)
 
     return $q;
 }
-
+//send image fetch from unsplash
 function fetchUnsplashImage($query, $enforceLatin = null)
 {
     $key = $_ENV['UNSPLASH_ACCESS_KEY'] ?? '';
