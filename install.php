@@ -172,7 +172,7 @@ try {
     );
     
     echo "</div>";
-    echo "<div class='step success'>";
+    echo "<div class='step success s'>";
     echo "<div class='step-title'><span class='icon success-icon'>✅</span>Підключення успішне!</div>";
     echo "</div>";
     
