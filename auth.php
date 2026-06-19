@@ -9,7 +9,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 $input = json_decode(file_get_contents('php://input'), true);
 
 // POST /auth.php - Вход 
-// POST /auth.php?action=login - Вход
+
 if ($method === 'POST' && !isset($_GET['action'])) {
     if (!isset($input['username']) || !isset($input['password'])) {
         http_response_code(400);
